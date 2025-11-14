@@ -12,7 +12,9 @@
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <p>Possivel arte</p>
+                        <div class="about-img">
+                            <img src="<?= baseUrl ?>assets/img/estante_home.png" alt="" class="img-fluid rounded mb-4 mb-sm-0" />
+                        </div>
                     </div>
                 </div>
             </div>
