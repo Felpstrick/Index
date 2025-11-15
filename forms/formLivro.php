@@ -1,9 +1,9 @@
 
 <?php include("../includes/header.php") ?>
-        <div class="container px-5 my-5 p-5 fade">
+        <div class="container px-5 my-5 fade">
             <div class="row justify-content-center">
                 <div class="col-lg-4">
-                    <h2 class="fw-bolder mb-4 text-center">Cadstro de livros</h2>
+                    <h2 class="fw-bolder mb-4 text-center">Cadastro de livros</h2>
                     <form action="<?= baseUrl ?>actions/actionLivro.php" method="post" name="formLivro" id="formLivro" enctype="multipart/form-data">
                         <div class="form-control mb-3 mt-3">
                             <label for="fotoLivro">Foto: </label>

@@ -1,6 +1,6 @@
 
 <?php include("../includes/header.php") ?>
-        <div class="container px-5 my-5 p-5 fade">
+        <div class="container px-5 my-5 fade">
             <div class="row justify-content-center">
                 <div class="col-lg-4">
                     <h2 class="fw-bolder mb-4 text-center">Crie sua conta com facilidade</h2>
@@ -8,6 +8,7 @@
                         <div class="form-floating mb-3 mt-3">
                             <input type="text" class="form-control" id="nomeUsuario" name="nomeUsuario" placeholder="Digite seu nome completo" required>
                             <label for="nomeUsuario">Nome: </label>
+                            <div class="invalid-feedback">A name is required.</div>
                         </div>
                         <div class="form-floating mb-3 mt-3">
                             <input type="email" class="form-control" id="emailUsuario" name="emailUsuario" placeholder="Digite seu Email" required>

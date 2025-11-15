@@ -2,7 +2,7 @@
 <?php include("../includes/header.php") ?>
 
 
-        <div class="container px-5 my-5 p-5 fade">
+        <div class="container px-5 my-5 fade">
             <div class="row gx-5 justify-content-center">
                 <div class="col-lg-4">
                     <form action="" method="post">

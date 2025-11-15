@@ -1,6 +1,6 @@
 
 <?php include("header.php") ?>
-        <div class="container-fluid px-5 my-5 p-5 fade">
+        <div class="container-fluid px-5 my-5 fade">
             <div class="row">
                 
                 <div class="text-center mb-5 col-sm-6">
