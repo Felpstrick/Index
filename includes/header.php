@@ -10,6 +10,8 @@
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Bootstrap icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
         <!-- Google fonts-->
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <!-- Core theme CSS (includes Bootstrap)-->
@@ -17,6 +19,18 @@
         <!-- scripts jQuery for masks -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+        <script src="https://unpkg.com/lucide@latest"></script>
+        <style>
+            .bg-image {
+                height: 65vh;
+                background: 
+                    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+                    url('<?= baseUrl ?>assets/img/estante_home.png');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+}
+        </style>
 
         <script src="<?= baseUrl ?>js/scripts.js"></script>
     </head>

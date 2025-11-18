@@ -10,11 +10,12 @@
         $publicacaoLivro = date('Y-m-d');
         $anoPublicacao = date('Y');
         $generoLivro = trim($_POST["generoLivro"]);
+        $autorLivro = trim($_POST["autorLivro"]);
 
-        if (empty($tituloLivro) || empty($editoraLivro) || empty($publicacaoLivro) || empty($generoLivro)) {
+        if (empty($tituloLivro) || empty($editoraLivro) || empty($publicacaoLivro) || empty($generoLivro) || empty($autorLivro)) {
             $ok = false;
             echo"<span class='text-danger'>Campos não preenchidos</span>";
-        }
+        }   
         $directory    = img_books;
         $fotoLivro  =   $_FILES["fotoLivro"]["name"];
         $finalPath = img_dir . $fotoLivro;
@@ -40,8 +41,8 @@
 
         if ($ok && $uploadOK) {
             include("../includes/conn.php");
-            $sql = "INSERT INTO livro (foto, titulo, editora, ano_publicacao, genero, status) 
-            VALUES ('$finalPath', '$tituloLivro', '$editoraLivro', '$anoPublicacao', '$generoLivro', 'disponivel')";
+            $sql = "INSERT INTO livro (foto, titulo, autor, editora, ano_publicacao, genero, status) 
+            VALUES ('$finalPath', '$tituloLivro', '$autorLivro', '$editoraLivro', '$anoPublicacao', '$generoLivro', 'disponivel')";
             mysqli_query($link, $sql);
             mysqli_close($link);
             echo"<div class='container align-center text-center jusftify-content-center mt-5 p-5'>

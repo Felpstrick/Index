@@ -102,6 +102,7 @@ body {
   background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  padding-bottom: 60px;
 }
 
 hr {
@@ -6753,9 +6754,10 @@ textarea.form-control-lg {
   color: #1a1e21 !important;
 }
 
-.ratio {
+.rati {
   position: relative;
   width: 100%;
+  height: 100%;
 }
 .ratio::before {
   display: block;
@@ -6774,7 +6776,7 @@ textarea.form-control-lg {
   --bs-aspect-ratio: 100%;
 }
 
-.ratio-4x3 {
+.rati-4x3 {
   --bs-aspect-ratio: 75%;
 }
 
@@ -11163,8 +11165,109 @@ footer a:hover, footer a:active, footer a:focus {
   }
 }
 
+
+
+
+
+
+
+
+
 .fade.in {
   opacity: 1;
   transform: translateY(0);
 }
 
+.featured-vertical {
+    height: 500px;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.featured-vertical-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+    transition: 0.3s ease-in-out;
+}
+
+.featured-vertical:hover .featured-vertical-img {
+    filter: brightness(55%);
+    transform: scale(1.03);
+}
+
+.featured-vertical-overlay {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+}
+
+.featured-small-v2 {
+    height: 260px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.featured-small-v2-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+    transition: 0.3s ease;
+}
+
+.featured-small-v2:hover .featured-small-v2-img {
+    filter: brightness(55%);
+    transform: scale(1.05);
+}
+
+.featured-small-v2-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.genre-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* Estilo base */
+.genre-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 10px 16px;
+    border-radius: 10px;
+
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+
+    color: white !important;
+    transition: 0.25s ease;
+}
+
+.genre-item i {
+    width: 18px;
+    height: 18px;
+}
+
+/* Hover */
+.genre-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+}
+
+/* CORES INDIVIDUAIS */
+.genre-ficcao      { background: #6c63ff; }
+.genre-romance     { background: #ff4f7b; }
+.genre-fantasia    { background: #4fc3f7; }
+.genre-terror      { background: #333333; }
+.genre-suspense    { background: #ffa726; }
+.genre-bio         { background: #66bb6a; }
+.genre-hq          { background: #ab47bc; }
+.genre-ciencia     { background: #29b6f6; }
