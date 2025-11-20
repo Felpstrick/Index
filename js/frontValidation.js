@@ -19,6 +19,7 @@ if (formLogin) {
             botaoLogin.disabled = !preenchido;
         }
         formLogin.addEventListener('input', verificarCampos);
+        verificarCampos();
         formLogin.addEventListener('submit', (erroPreenchimento) => {
             erroPreenchimento.preventDefault();
         
@@ -67,6 +68,7 @@ if (formUsuario){
             botaoCadastro.disabled = !preenchido;
         }
         formUsuario.addEventListener('input', verificarCampos);
+        verificarCampos();
         formUsuario.addEventListener('submit', (erroPreenchimento) => {
             erroPreenchimento.preventDefault();
             console.log('Validating form...');

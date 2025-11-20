@@ -29,6 +29,10 @@
                             <input type="generoLivro" class="form-control" id="generoLivro" name="generoLivro" placeholder="Digite o gênero do livro: " required>
                             <label for="generoLivro" class="form-label">Gênero: </label>
                         </div>
+                        <div class="mb-3 form-floating">
+                            <textarea name="descricaoLivro" id="descricaoLivro" class="form-control "></textarea>
+                            <label for="descricaoLivro" class="form-label">Descrição: </label>
+                        </div>
                         <button type="submit" class="btn btn-dark w-100" id="btnLivro">Cadastrar</button>
                     </form>
                     <p name="msgLivro" id="msgLivro"></p>

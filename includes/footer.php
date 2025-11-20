@@ -1,5 +1,5 @@
         </div>
-        <footer class="bg-black text-center py-2 fixed-bottom">
+        <footer class="bg-black text-center py-1 fixed-bottom">
             <div class="container px-5">
                 <div class="text-white-50 small">
                     <div class="mb-2">&copy; 2025. All Rights Reserved.</div>

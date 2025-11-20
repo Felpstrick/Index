@@ -23,7 +23,7 @@
             </div>
         </section>
         <section>
-            <div class="fade conteiner">
+            <div class="fade conteiner px-5">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="featured-vertical mb-5 position-relative">
@@ -96,14 +96,14 @@
                         $path = img_books . basename($fotoLivro);
                         echo "
                             <div class='col-sm-12 col-md-3 col-lg-2 mb-4'>
-                                <div class='card h-100' style='border-radius: 12px; max-width: 15rem;'>
-                                    <div style='aspect-ratio: 3 / 4; width: 100%; overflow: hidden;'>
-                                        <img src='$path' class='mb-3 card-img-top' alt='Capa do livro $tituloLivro' style='width: 100%; height: 100%; object-fit: cover; display: block'/>
+                                <div class='card h-100' style='border-radius: 12px; max-width: 300px;'>
+                                    <div style='aspect-ratio: 3 / 4; width: 90%; overflow: hidden;' class='mt-3 mb-1 align-self-center'>
+                                        <img src='$path' class='mb-3 card-img-top' alt='Capa do livro $tituloLivro' style='width: 100%; border-radius: 12px; height: 100%; display: block'/>
                                     </div>
                                     <div class='card-body d-flex flex-column'>
                                         <h5 class='card-title'>$tituloLivro</h3>
-                                        <p class=' text-muted'>$autorLivro</p>
-                                        <p class='t text-muted'>$anoPublicacao</p>";
+                                        <p class='text-muted'>$autorLivro</p>
+                                        <p class='text-muted'>$anoPublicacao</p>";
                                                 if($reg['status'] == 'indisponivel'){
                                                     echo "<span class='btn btn-dark mt-3 disabled'>Indisponível</span>";
                                                 } 

@@ -1,7 +1,7 @@
 <?php include("../includes/header.php") ?>
 
 <?php  
-    $tituloLivro = $autorLivro = $editoraLivro = $publicacaoLivro = $generoLivro = "";
+    $tituloLivro = $autorLivro = $editoraLivro = $publicacaoLivro = $generoLivro = $descricaoLivro ="";
     $ok = true;
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $tituloLivro = trim($_POST["nomeLivro"]);
@@ -11,8 +11,9 @@
         $anoPublicacao = date('Y');
         $generoLivro = trim($_POST["generoLivro"]);
         $autorLivro = trim($_POST["autorLivro"]);
+        $descricaoLivro = trim($_POST["descricaoLivro"]);
 
-        if (empty($tituloLivro) || empty($editoraLivro) || empty($publicacaoLivro) || empty($generoLivro) || empty($autorLivro)) {
+        if (empty($tituloLivro) || empty($editoraLivro) || empty($publicacaoLivro) || empty($generoLivro) || empty($autorLivro) || empty($descricaoLivro)) {
             $ok = false;
             echo"<span class='text-danger'>Campos não preenchidos</span>";
         }   
@@ -41,8 +42,8 @@
 
         if ($ok && $uploadOK) {
             include("../includes/conn.php");
-            $sql = "INSERT INTO livro (foto, titulo, autor, editora, ano_publicacao, genero, status) 
-            VALUES ('$finalPath', '$tituloLivro', '$autorLivro', '$editoraLivro', '$anoPublicacao', '$generoLivro', 'disponivel')";
+            $sql = "INSERT INTO livro (foto, titulo, autor, editora, ano_publicacao, genero, descricao, status) 
+            VALUES ('$finalPath', '$tituloLivro', '$autorLivro', '$editoraLivro', '$anoPublicacao', '$generoLivro', '$descricaoLivro', 'disponivel')";
             mysqli_query($link, $sql);
             mysqli_close($link);
             echo"<div class='container align-center text-center jusftify-content-center mt-5 p-5'>

@@ -46,3 +46,17 @@ $(document).ready(function(){
     $("#telefoneUsuario").mask('(00) 00000-0000');
 });
 
+
+document.getElementById('selecionarLivro').addEventListener('change', function() {
+    var selectedOption = this.options[this.selectedIndex].getAttribute('data-img');
+    var imgReserva = document.getElementById('imgReserva');
+    if(selectedOption) {
+        imgReserva.src = selectedOption;
+        imgReserva.onload = () => {
+
+            imgReserva.classList.add('in');
+        }
+    };
+
+});
+

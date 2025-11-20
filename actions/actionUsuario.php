@@ -1,4 +1,3 @@
-<?php require("../includes/config.php") ?>
 <?php include("../includes/header.php") ?>
 
 <?php  
@@ -25,14 +24,18 @@
 
         if ($ok) {
             include("../includes/conn.php");
-            echo"$telefoneUsuario";
-            $sql = "INSERT INTO usuario (nome, email, telefone, senha) 
-            VALUES ('$nomeUsuario', '$emailUsuario', '$telefoneUsuario', '$senhaUsuario')";
+            $sql = "INSERT INTO usuario (nome, email, telefone, senha, tipo) 
+            VALUES ('$nomeUsuario', '$emailUsuario', '$telefoneUsuario', '$senhaUsuario', 'usuario')";
             mysqli_query($link, $sql);
             mysqli_close($link);
             echo"<div class='container align-center text-center jusftify-content-center'>
                     <span class='text-success mt-5'>Cadastro realizado com sucesso!</span>
-                </div>";
+                </div>
+                <script>
+                    setTimeout(function(){
+                        window.location.href = '" . baseUrl . "';
+                    }, 3000);
+                </script>";
         }
     }
 
